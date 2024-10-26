@@ -132,6 +132,8 @@ message(STATUS "Compiler features available: ${AVAILABLE_COMPILER_FEATURES}")
 
 ### Compiler Feature Detection ###
 
+include(CheckCXXCompilerFlag)
+
 # clang-8+, gcc-12+
 check_cxx_compiler_flag("-ftrivial-auto-var-init=pattern" LIBC_CC_SUPPORTS_PATTERN_INIT)
 
